@@ -9,14 +9,14 @@ class SpelElement {
 }
 
 class Speler extends SpelElement {
-    horzSpeed;
-    vertSpeed;
+    xSpeed;
+    ySpeed;
     status;
 
-    constructor(_xPos, _yPos, _horzSpeed, _vertSpeed, _status) {
+    constructor(_xPos, _yPos, _xSpeed, _ySpeed, _status) {
         super(_xPos, _yPos);
-        this.xSpeed = _horzSpeed;
-        this.vertSpeed = _vertSpeed;
+        this.xSpeed = _xSpeed;
+        this.ySpeed = _ySpeed;
         this.status = _status;
     }
 
@@ -39,11 +39,11 @@ class Speler extends SpelElement {
         rect(this.xPos - 15, this.yPos - 30, 10, 10);
     }
 
-    move() {
-        if (this.xSpeed ==! 0) {
-            this.xPos += this.horzSpeed;
-        } else if (this.vertSpeed ==! 0) {
-            this.yPos += this.vertSpeed;
+    fuckingdoiets() {
+        if (this.xSpeed === 20) {
+            this.xPos = this.xPos + this.xSpeed;
+        } else if (this.ySpeed === 20) {
+            this.yPos = this.yPos + this.ySpeed;
         }
     }
 }

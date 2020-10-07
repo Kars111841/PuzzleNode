@@ -1,5 +1,10 @@
-var aTest = new Speler(400, 500, 20, 0, true)
-var bTest = new Speler(200, 500, 0, 0, false)
+
+var lol = false;
+
+//-------------------------------------------
+
+var aTest;
+var bTest;
 
 function setup() {
     createCanvas(1920, 1080);
@@ -20,10 +25,15 @@ function draw() {
     line(60, 121, 60, 1020);
     line(1860, 60, 1860, 1020);
 
-    aTest.display();
-    bTest.display();
-    aTest.move();
+    if(lol) {
+        aTest = new Speler(400, 500, 20, 0, true);
+        bTest = new Speler(200, 500, 0, 0, false);
+    
 
+    aTest.display();
+    aTest.fuckingdoiets();
+
+    }
 
 
     //level en moves
@@ -32,6 +42,6 @@ function draw() {
     fill(150, 22, 0); //moves
     rect(1800, 0, 121, 121);
 
-
+    lol = true;
 
 }
