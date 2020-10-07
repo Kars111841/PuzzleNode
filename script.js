@@ -1,13 +1,25 @@
 
-var lol = false;
 
 //-------------------------------------------
 
-var aTest;
-var bTest;
+//dimensie scherm is 30-16
+
+var blok;
+var blokken = [];
+var aTest = [];
+
 
 function setup() {
     createCanvas(1920, 1080);
+    for(var i = 0; i < 4; i++) {
+        blok = new StandaardBlok(2 + i, 4);
+        blokken.push(blok);
+    }
+    blok = new Finish(8, 4);
+    blokken.push(blok);
+
+    blok = new Speler(200, 600, 15, 0, true);
+    aTest.push(blok);
 }
 
 function draw() {
@@ -25,23 +37,24 @@ function draw() {
     line(60, 121, 60, 1020);
     line(1860, 60, 1860, 1020);
 
-    if(lol) {
-        aTest = new Speler(400, 500, 20, 0, true);
-        bTest = new Speler(200, 500, 0, 0, false);
-    
 
-    aTest.display();
-    aTest.fuckingdoiets();
 
+
+    aTest[0].display();
+    aTest[0].fuckingdoiets();
+
+
+    for(var i = 0; i < blokken.length; i++) {
+        blokken[i].display();
     }
 
-
     //level en moves
+    stroke(0, 0, 0);
     fill(0, 22, 150); //level
     rect(-1, -1, 121, 121);
     fill(150, 22, 0); //moves
     rect(1800, 0, 121, 121);
 
-    lol = true;
+
 
 }

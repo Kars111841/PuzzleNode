@@ -40,11 +40,8 @@ class Speler extends SpelElement {
     }
 
     fuckingdoiets() {
-        if (this.xSpeed === 20) {
-            this.xPos = this.xPos + this.xSpeed;
-        } else if (this.ySpeed === 20) {
-            this.yPos = this.yPos + this.ySpeed;
-        }
+        this.xPos += this.xSpeed;
+        this.yPos += this.ySpeed;
     }
 }
 
@@ -52,10 +49,31 @@ class StandaardBlok extends SpelElement {
     constructor(_xPos, _yPos) {
         super(_xPos, _yPos);
     }
+
+    display() {
+        stroke(0, 0, 0);
+        fill(120, 120, 120);
+        rect((this.xPos * 60), (this.yPos * 60), 60, 60);
+    }
 }
 
 class Finish extends SpelElement {
     constructor(_xPos, _yPos) {
         super(_xPos, _yPos);
+    }
+
+    display() {
+        noStroke();
+        fill(0, 0, 0);
+        rect(this.xPos * 60, this.yPos * 60, 60, 60);
+        fill(255, 255, 255);
+        rect(this.xPos * 60, this.yPos * 60, 15, 15);
+        rect(this.xPos * 60, this.yPos * 60 + 30, 15, 15);
+        rect(this.xPos * 60 + 30, this.yPos * 60, 15, 15);
+        rect(this.xPos * 60 + 30, this.yPos * 60 + 30, 15, 15);
+        rect(this.xPos * 60 + 15, this.yPos * 60 + 15, 15, 15);
+        rect(this.xPos * 60 + 15, this.yPos * 60 + 45, 15, 15);
+        rect(this.xPos * 60 + 45, this.yPos * 60 + 15, 15, 15);
+        rect(this.xPos * 60 + 45, this.yPos * 60 + 45, 15, 15);
     }
 }
