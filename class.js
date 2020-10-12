@@ -1,3 +1,65 @@
+class Game {
+    run() {
+
+    }
+}
+
+class Menu {
+    run() {
+
+    }
+}
+
+class Gameplay {
+    run() {
+       gronden[0].show();
+       gronden[1].show();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SpelElement {
     xPos;
     yPos;
