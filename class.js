@@ -1,6 +1,7 @@
 class Game {
     run() {
-
+        coreRun[1].run();
+        coreRun[2].run();
     }
 }
 
@@ -12,8 +13,8 @@ class Menu {
 
 class Gameplay {
     run() {
-       gronden[0].show();
-       gronden[1].show();
+       displayGronden[0].show();
+       displayGronden[1].show();
     }
 }
 
@@ -101,7 +102,7 @@ class Speler extends SpelElement {
         rect(this.xPos - 15, this.yPos - 30, 10, 10);
     }
 
-    fuckingdoiets() {
+    move() {
         this.xPos += this.xSpeed;
         this.yPos += this.ySpeed;
     }

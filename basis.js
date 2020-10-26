@@ -26,3 +26,9 @@ class Voorgrond { //maakt de voorgrond bij gameplay
         rect(1800, 0, 121, 121);//level en moves
     }
 }
+
+class MenuLevel {
+    show() {}
+
+    
+}
